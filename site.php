@@ -10,19 +10,24 @@
         $Name = "Anthony";
         $Greeting = "Good Morning";
         $City = "Green Bay";
-        $number1 = 20;
-        $number2 = "20.00";
+        $number1 = "30.0";
+        $number2 = 30;
         if($number1 == $number2){
             $Boolean = "true";
+            if($number1 === $number2){
+                $Boolean2 = "true";
+            }else{
+                $Name2 = $Name;
+                $Name = "Jonathan";
+                $Boolean2 = "BUT, really, false.  (did you catch it, $Name2 ?)";
+                // $Greeting[0] = "K";
+                $Greeting = str_replace("Good Morning", "gnirnoM dooG", $Greeting);
+               
+            }    
         }else{
             $Boolean = "false";
+            $Boolean2 = "";
         }
-        if($number1 === $number2){
-            $Boolean2 = "true";
-        }else{
-            $Boolean2 = "false";
-        }
-
 
         echo"
         <div class='tophalf'><center><h1>Sporting News</h1></center>
@@ -32,15 +37,15 @@
         <td class='title'></td>
         </th>
         <tr>
-        <td>Venue</td>
-        <td>City</td>
-        <td>Capacity</td>
+        <td class='TitleRow'>Venue</td>
+        <td class='TitleRow'>City</td>
+        <td class='TitleRow'>Capacity</td>
         </tr>
         <tbody>
         <tr>
-        <td>Lambeau</td>
-        <td>Greenbay</td>
-        <td>80,750</td>
+        <td class='tableData'>Lambeau</td>
+        <td class='tableData'>Greenbay</td>
+        <td class='tableData'>80,750</td>
         </tr>
         </tbody>
         </table></center>
@@ -51,21 +56,25 @@
         <center id='middle'>$Greeting, $Name!<center>
         <div id='bottom_background'>
         <center><div id='bottom'>
-        <div>Bottom Section</div>
+        <div id='bottomSection'>ｉｎ ｏｔｈｅｒ ｎｅｗｓ</div>
         <span id='line2'>(Strikingly similar to HTML)</span>
         <br/>
         <hr/>
         <div id='words'>Lorem ipsum dolor sit amet, <b class='city'>$City</b>, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas dui id ornare arcu odio ut. Risus ultricies tristique nulla aliquet enim. Habitasse platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper <b class='city'>$City </b> dignissim. Ante metus dictum at tempor commodo ullamcorper a lacus vestibulum. Tristique sollicitudin nibh sit amet commodo nulla facilisi. Arcu ac tortor dignissim convallis. <b class='city'>$City </b>. Integer enim neque volutpat ac tincidunt vitae semper quis.</div>
+        <div id='numberbox'>
+        <button id='justButton'>just a button</button><br/>
+        <div id='forNow'>for now</div>
+        </div>
         <div id='numbertest'>
+        Does 
         <div class='numbers'> $number1  = $number2 ?</div>
         <div>well...</div>
         <br/>
         $Boolean.";
         if($number1 !== $number2){
         echo "
-        <p id='falseEqual'> but, really
+        <p id='falseEqual'>
         $Boolean2 </p>";  
-        // </div>";
         }
         echo "
         </div>
@@ -73,5 +82,14 @@
         </center>
         </div>";
         ?>
+        <form class="NumberBox2" action="site.php" method="get">
+            <label><center>Try it out!</center></label>
+            <label>First Number:</label>
+            <input class="inputfields" type="text" name="number"/>
+            <label>Second Number:</label>
+            <input class="inputfields" type="text" name="number2"/><br/>
+            <input id="TopJustButton" type="submit" value="Click Here">
+
+        </form>
     </body>
 </html>

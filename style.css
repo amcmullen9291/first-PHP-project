@@ -25,8 +25,10 @@ h1 {
     margin-left: 5%;
 }
 
-#line2px {
-    color: pink;
+#line2 {
+    color:sandybrown;
+    font-size:20px;
+
 }
 
 .title{
@@ -65,3 +67,56 @@ td {
     color: orange;
     width:fit-content
 }
+
+#BottonSection {
+    color:burlywood;
+}
+
+#numberbox {
+    align-content:flex-start;
+    border: 5px dotted blue; 
+    width: 17%; /* Set the width of the sidebar */
+	position: fixed;
+    height: 25%;
+	left: 20;
+    background-color: lightpink;
+}
+
+#justButton{
+    border-radius: 50%;
+    width: auto;
+    height: 35px;
+    color: lightcoral;
+}
+
+#forNow {
+    font-size: 18px;
+    color: rgb(49, 122, 146);
+}
+
+.tableData {
+    border-left: 1px solid black ;
+    border-right: 1px solid black ;
+    /* border-bottom: 1px solid black ; */
+}
+
+.TitleRow {
+    border-bottom: 1px solid black ;
+}
+
+.NumberBox2 {
+    align-content:flex-start;
+    border: 5px dotted blue; 
+    width: 17%; /* Set the width of the sidebar */
+	position: fixed;
+    height: 25%;
+	top: 0;
+    right:0;
+    background-color: lightpink;
+}
+
+
+.inputfields {
+    width: 3em;
+}
+
