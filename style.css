@@ -1,0 +1,38 @@
+table {
+    border: 3px solid red;
+}
+
+h3{
+    background-color: peach;
+    border: 5px dotted yellow;
+    width: fit-content;
+}
+
+h1 {
+    color: purple;
+    background-color:yellow;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+#bottom {
+    height: 500px;
+    font-size: 36px;
+    color: white;
+    background-color:green;
+    border: 7px solid yellow;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+#line2px {
+    color: pink;
+}
+
+.title{
+    border-bottom: 5px dashed grey;
+}
+
+#bottom_background {
+    background-color: salmon;
+}
