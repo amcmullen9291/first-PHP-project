@@ -38,7 +38,30 @@ h1 {
 #bottom_background {
     background-color: salmon;
 }
+#middle {
+    font-size: 24px;
+}
+
+#words {
+    color: black;
+    font-size:18px;
+}
 
 .tophalf {
     background-color: aqua;
+}
+
+.city {
+    color: purple;
+    font-size: 20px;
+}
+
+td {
+    text-align: center;
+}
+
+#falseEqual {
+    border-bottom: 5px solid brown;
+    color: orange;
+    width:fit-content
 }
