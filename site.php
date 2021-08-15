@@ -1,9 +1,14 @@
 <!DOCTYPE html>
 <html>
+    <?php
+        $page = $_SERVER['PHP_SELF'];
+        $sec = "30";
+    ?>
     <head>
-    <link rel="stylesheet" type="text/css" href="style.css">
-        <meta charset="uft-8">
-    <title>My Page</title>
+        <meta http-equiv="refresh" content="<?php echo $sec?>;URL='<?php echo $page?>'">
+        <link rel="stylesheet" type="text/css" href="style.css">
+            <meta charset="uft-8">
+        <title>PHP Power</title>
     </head>
     <body>
         <?php 
@@ -43,7 +48,7 @@
         </tr>
         <tbody>
         <tr>
-        <td class='tableData'>Lambeau</td>
+        <td class='tableData'>Lambeau Field</td>
         <td class='tableData'>Greenbay</td>
         <td class='tableData'>80,750</td>
         </tr>

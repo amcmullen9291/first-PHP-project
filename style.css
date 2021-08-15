@@ -110,8 +110,8 @@ td {
     width: 17%; /* Set the width of the sidebar */
 	position: fixed;
     height: 25%;
-	top: 0;
-    right:0;
+	bottom: 3%;
+    right:6%;
     background-color: lightpink;
 }
 
