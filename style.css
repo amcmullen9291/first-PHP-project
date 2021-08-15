@@ -31,8 +31,14 @@ h1 {
 
 .title{
     border-bottom: 5px dashed grey;
+    background-color:aquamarine;
+    font-size: 24px;
 }
 
 #bottom_background {
     background-color: salmon;
+}
+
+.tophalf {
+    background-color: aqua;
 }

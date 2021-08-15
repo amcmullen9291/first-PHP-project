@@ -7,8 +7,9 @@
     </head>
     <body>
         <?php 
-        echo"<center><h1>My Heading</h1></center>";
-        echo"<center><table>
+        echo"
+        <div class='tophalf'><center><h1>Sporting News</h1></center>
+        <center><table>
         <td class='title'></td>
         <td class='title'>Team Stats</center></td>
         <td class='title'></td>
@@ -25,7 +26,8 @@
         <td>None</td>
         </tr>
         </tbody>
-        </table></center>";
+        </table></center>
+        </div>";
 
         echo "<hr/>";
         echo"<br/><br/>
