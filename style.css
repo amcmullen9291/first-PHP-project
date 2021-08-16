@@ -78,7 +78,7 @@ td {
     width: 17%; /* Set the width of the sidebar */
 	position: fixed;
     height: 25%;
-	right: 20%;  /*was left: 20*/
+	left: 20;  /*was left: 20*/
     background-color: lightpink;
 }
 

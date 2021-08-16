@@ -2,29 +2,25 @@
 <html>
     <?php
         $page = $_SERVER['PHP_SELF'];
-        $sec = "";
+        $sec = "100";
         $Name = "";
         $Greeting = "Good Morning";
         $City = "Green Bay";
         $number1 = "";
         $number2 = "";
+        $Boolean ="";
+        $Boolean2 ="";
         if($number1 == $number2){
             $Boolean = "true";
-            if($number1 === $number2){
-                $Boolean2 = "true";
-            }else{
+        }
+            if($number1 != $number2){
                 $Name2 = $Name;
                 $Name = "Jonathan";
-                $Boolean2 = "BUT, really, false.  (did you catch it, $Name2 ?)";
+                $Boolean = "Really? false.  (did you catch it, $Name2 ?)";
                 // $Greeting[0] = "K";
                 $Greeting = str_replace("Good Morning", "gnirnoM dooG", $Greeting);
                
             }    
-        }else{
-            $Boolean = "false";
-            $Boolean2 = "";
-        }
-
     ?>
     <head>
         <meta http-equiv="refresh" content="<?php echo $sec?>;URL='<?php echo $page?>'">
@@ -81,23 +77,18 @@
         </form>
         </div>";
 
-        if($_POST['Number1'] && $_POST['Number2']){
+        if($_POST['Number2']){
             $number1 = $_POST['Number1'];
-            $number2 = $_POST['Number2'];           
-            if($number1 !== $number2){
+            $number2 = $_POST['Number2'];
+            $total = $number1+$number2;           
             echo "
     
         <div id='numbertest'>
-        Does 
-        <div class='numbers'> $number1 = $number2 ?</div>
-        <div>well...</div>
+        <div class='numbers'> $number1 + $number2 = $total</div>
+        <div>( ͡ಠ ͜ʖ ͡ಠ) </div>
         <br/>
-        $Boolean.
-
-        <p id='falseEqual'>
-        $Boolean2 </p>";  
-        }
-    }
+";
+            }
         echo "
         </div>
         </div>
@@ -117,9 +108,8 @@
         <?php
         function pre_r( $array ){
             echo '<pre>';
-                // print_r($array);
+                print_r($array);
             echo '</pre>';
-            // $Name = $_POST['Name'];
         }
 
         ?>
