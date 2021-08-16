@@ -29,30 +29,8 @@
         <!-- <title>PHP Power</title> -->
     </head>
     <body>
-        <?php 
-        echo"
-        <div class='tophalf'><center><h1>Sporting News</h1></center>
-        <center><table>
-        <td class='title'></td>
-        <td class='title'>Team Stats</center></td>
-        <td class='title'></td>
-        </th>
-        <tr>
-        <td class='TitleRow'>Venue</td>
-        <td class='TitleRow'>City</td>
-        <td class='TitleRow'>Capacity</td>
-        </tr>
-        <tbody>
-        <tr>
-        <td class='tableData'>Lambeau Field</td>
-        <td class='tableData'>Greenbay</td>
-        <td class='tableData'>80,750</td>
-        </tr>
-        </tbody>
-        </table></center>
-        </div>";
-
-        echo "<hr/>";
+        <?php include "table.html" ?>
+        <?php
         if($_POST['Name']){
             $Name = $_POST['Name'];
         echo"
