@@ -2,7 +2,7 @@
 <html>
     <?php
         $page = $_SERVER['PHP_SELF'];
-        $sec = "100";
+        $sec = "";
         $Name = "";
         $Greeting = "Good Morning";
         $City = "Green Bay";
@@ -103,13 +103,14 @@
             <center><label>Welcome Back,</label></center>
             <center><input class="inputfields" type="text" name="Name" value=""/>!</center>
             <p>(Your name here)</p>
-            <center><input id="TopJustButton" type="submit" value="Submit"></center>
+            <center><input id="TopJustButton" type="submit" name="submit" value="Submit"></center>
         </form>
         <?php
         function pre_r( $array ){
             echo '<pre>';
                 print_r($array);
             echo '</pre>';
+            
         }
 
         ?>
