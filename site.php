@@ -2,21 +2,12 @@
 <html>
     <?php
         $page = $_SERVER['PHP_SELF'];
-        $sec = "30";
-    ?>
-    <head>
-        <meta http-equiv="refresh" content="<?php echo $sec?>;URL='<?php echo $page?>'">
-        <link rel="stylesheet" type="text/css" href="style.css">
-            <meta charset="uft-8">
-        <title>PHP Power</title>
-    </head>
-    <body>
-        <?php 
-        $Name = "Anthony";
+        $sec = "";
+        // $Name = "Anthony";
         $Greeting = "Good Morning";
         $City = "Green Bay";
-        $number1 = "30.0";
-        $number2 = 30;
+        $number1 = 256;
+        $number2 = 256;
         if($number1 == $number2){
             $Boolean = "true";
             if($number1 === $number2){
@@ -34,6 +25,15 @@
             $Boolean2 = "";
         }
 
+    ?>
+    <head>
+        <meta http-equiv="refresh" content="<?php echo $sec?>;URL='<?php echo $page?>'">
+        <link rel="stylesheet" type="text/css" href="style.css">
+            <meta charset="uft-8">
+        <title>PHP Power</title>
+    </head>
+    <body>
+        <?php 
         echo"
         <div class='tophalf'><center><h1>Sporting News</h1></center>
         <center><table>
@@ -57,8 +57,13 @@
         </div>";
 
         echo "<hr/>";
+        if($_POST['Name']){
+            $Name = $_POST['Name'];
         echo"
         <center id='middle'>$Greeting, $Name!<center>
+        ";
+    }    
+    echo"
         <div id='bottom_background'>
         <center><div id='bottom'>
         <div id='bottomSection'>ｉｎ ｏｔｈｅｒ ｎｅｗｓ</div>
@@ -72,7 +77,7 @@
         </div>
         <div id='numbertest'>
         Does 
-        <div class='numbers'> $number1  = $number2 ?</div>
+        <div class='numbers'> $number1 = $number2 ?</div>
         <div>well...</div>
         <br/>
         $Boolean.";
@@ -87,14 +92,25 @@
         </center>
         </div>";
         ?>
-        <form class="NumberBox2" action="site.php" method="get">
-            <label><center>Try it out!</center></label>
-            <label>First Number:</label>
-            <input class="inputfields" type="text" name="number"/>
-            <label>Second Number:</label>
-            <input class="inputfields" type="text" name="number2"/><br/>
-            <input id="TopJustButton" type="submit" value="Click Here">
+        <?php 
+        pre_r($_POST);
+        
+        ?>
 
+        <form class="NumberBox2" action="" method="POST">
+            <label><center>Welcome Back!</center></label>
+            <div><label>Your name:</label></div>
+            <center><input class="inputfields" type="text" name="Name" value=""/></center><br/>
+            <hr/>
+            <center><input id="TopJustButton" type="submit" value="Submit"></center>
         </form>
+        <?php
+        function pre_r( $array ){
+            echo '<pre>';
+            // print_r($array);
+            echo '</pre>';
+            // $Name = $_POST['Name'];
+        }
+        ?>
     </body>
 </html>
