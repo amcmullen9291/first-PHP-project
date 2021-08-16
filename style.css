@@ -79,6 +79,7 @@ td {
 	position: fixed;
     height: 25%;
 	left: 20;  /*was left: 20*/
+    bottom: 19;
     background-color: lightpink;
 }
 
@@ -110,7 +111,7 @@ td {
     width: 17%; 
 	position: fixed;
     height: 25%;
-	bottom: 3%;
+	bottom: 8%;
     right:6%;
     background-color: lightpink;
 }
@@ -137,4 +138,10 @@ td {
 
 #number2{
     width:2em;
+}
+
+footer{
+    background-color: chocolate;
+    position: relative;
+    width: 100%;
 }

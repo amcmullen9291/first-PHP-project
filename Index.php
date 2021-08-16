@@ -26,7 +26,6 @@
         <meta http-equiv="refresh" content="<?php echo $sec?>;URL='<?php echo $page?>'">
         <link rel="stylesheet" type="text/css" href="style.css">
             <meta charset="uft-8">
-        <!-- <title>PHP Power</title> -->
     </head>
     <body>
         <?php include "table.html" ?>
@@ -35,15 +34,11 @@
             $Name = $_POST['Name'];
         echo"
         <center id='middle'>$Greeting, $Name!<center>
-        ";
-    }    
-    echo"
-        <div id='bottom_background'>
-        <center><div id='bottom'>
-        <div id='bottomSection'>ｉｎ ｏｔｈｅｒ ｎｅｗｓ</div>
-        <span id='line2'>(Strikingly similar to HTML)</span>
-        <br/>
-        <hr/>
+        ";}
+        ?>
+        <?php include "banner.html"?>
+        <?php
+        echo"
         <div id='words'>Lorem ipsum dolor sit amet, <b class='city'>$City</b>, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas dui id ornare arcu odio ut. Risus ultricies tristique nulla aliquet enim. Habitasse platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper <b class='city'>$City </b> dignissim. Ante metus dictum at tempor commodo ullamcorper a lacus vestibulum. Tristique sollicitudin nibh sit amet commodo nulla facilisi. Arcu ac tortor dignissim convallis. <b class='city'>$City </b>. Integer enim neque volutpat ac tincidunt vitae semper quis.</div>
         <div id='numberbox'>
         <form action='' method='POST'>
@@ -93,5 +88,5 @@
 
         ?>
     </body>
-    <?php include "Index.html" ?>
+    <?php include "Footer.html" ?>
 </html>
