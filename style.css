@@ -78,7 +78,7 @@ td {
     width: 17%; /* Set the width of the sidebar */
 	position: fixed;
     height: 25%;
-	left: 20;  /*was left: 20*/
+	right: 20%;  /*was left: 20*/
     background-color: lightpink;
 }
 
@@ -118,5 +118,23 @@ td {
 
 .inputfields {
     width: 3em;
+    border-bottom: 1px dashed grey;
+    border-top:none;
+    border-right:none;
+    border-left:none;
+    background: none;
+    width: 69px;
 }
 
+#boxwords{
+ font-size: 24px;
+ color: black;   
+}
+
+#number1{
+    width:2em;
+}
+
+#number2{
+    width:2em;
+}

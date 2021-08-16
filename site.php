@@ -3,11 +3,11 @@
     <?php
         $page = $_SERVER['PHP_SELF'];
         $sec = "";
-        // $Name = "Anthony";
+        $Name = "";
         $Greeting = "Good Morning";
         $City = "Green Bay";
-        $number1 = 256;
-        $number2 = 256;
+        $number1 = "";
+        $number2 = "";
         if($number1 == $number2){
             $Boolean = "true";
             if($number1 === $number2){
@@ -72,20 +72,32 @@
         <hr/>
         <div id='words'>Lorem ipsum dolor sit amet, <b class='city'>$City</b>, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Egestas dui id ornare arcu odio ut. Risus ultricies tristique nulla aliquet enim. Habitasse platea dictumst vestibulum rhoncus est pellentesque elit ullamcorper <b class='city'>$City </b> dignissim. Ante metus dictum at tempor commodo ullamcorper a lacus vestibulum. Tristique sollicitudin nibh sit amet commodo nulla facilisi. Arcu ac tortor dignissim convallis. <b class='city'>$City </b>. Integer enim neque volutpat ac tincidunt vitae semper quis.</div>
         <div id='numberbox'>
-        <button id='justButton'>just a button</button><br/>
+        <form action='' method='POST'>
+        <div id='boxwords'>Enter 2 numbers</div>
+        <input id='number1' type='text' name='Number1' value=''/>
+        <input id='number2' type='text' name='Number2' value=''/>
+        <button type='submit' name='Submit' id='justButton'>just a button</button><br/>
         <div id='forNow'>for now</div>
-        </div>
+        </form>
+        </div>";
+
+        if($_POST['Number1'] && $_POST['Number2']){
+            $number1 = $_POST['Number1'];
+            $number2 = $_POST['Number2'];           
+            if($number1 !== $number2){
+            echo "
+    
         <div id='numbertest'>
         Does 
         <div class='numbers'> $number1 = $number2 ?</div>
         <div>well...</div>
         <br/>
-        $Boolean.";
-        if($number1 !== $number2){
-        echo "
+        $Boolean.
+
         <p id='falseEqual'>
         $Boolean2 </p>";  
         }
+    }
         echo "
         </div>
         </div>
@@ -94,23 +106,22 @@
         ?>
         <?php 
         pre_r($_POST);
-        
         ?>
 
         <form class="NumberBox2" action="" method="POST">
-            <label><center>Welcome Back!</center></label>
-            <div><label>Your name:</label></div>
-            <center><input class="inputfields" type="text" name="Name" value=""/></center><br/>
-            <hr/>
+            <center><label>Welcome Back,</label></center>
+            <center><input class="inputfields" type="text" name="Name" value=""/>!</center>
+            <p>(Your name here)</p>
             <center><input id="TopJustButton" type="submit" value="Submit"></center>
         </form>
         <?php
         function pre_r( $array ){
             echo '<pre>';
-            // print_r($array);
+                // print_r($array);
             echo '</pre>';
             // $Name = $_POST['Name'];
         }
+
         ?>
     </body>
 </html>
